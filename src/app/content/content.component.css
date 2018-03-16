@@ -1,0 +1,29 @@
+:host ::ng-deep .ant-carousel .slick-slide {
+    text-align: center;
+    height: 240px;
+    line-height: 160px;
+    width: 100%;
+    background: #364d79;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  h3 {
+    color: #fff;
+  }
+
+  .a{
+      text-align: center;
+      margin-left: 60px;
+     margin-top: 10px;
+  }
+.b {
+     border:1px solid #bbb;
+     margin-right:105px;
+     background-color: #ddd
+   
+}
+.c {
+  padding-top:20px;
+}
+ 

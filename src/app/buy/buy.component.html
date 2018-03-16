@@ -1,0 +1,50 @@
+<nz-layout class="layout">
+  <nz-header>
+
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;">
+      <li nz-menu-item>
+        <strong>ETH</strong>
+      </li>
+      <li nz-menu-item>
+        <strong>XRP</strong>
+      </li>
+      <li nz-menu-item>
+        <strong>XMR</strong>
+      </li>
+      <li nz-menu-item>
+        <strong>XLM</strong>
+      </li>
+      <li nz-menu-item>
+        <strong>ADA</strong>
+      </li>
+    </ul>
+  </nz-header>
+
+
+  <nz-content>
+    <div>
+      <table class="table" style="margin:30px 60px">
+        <tr>
+          <th>昵称</th>
+          <th>信用</th>
+          <th>付款方式</th>
+          <th>限额</th>
+          <th>价格</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let buy of buys">
+          <td>{{buy.name}}</td>
+          <td>{{buy.credit}}</td>
+          <td>{{buy.way}}</td>
+          <td>{{buy.limit}}</td>
+          <td>{{buy.price}}</td>
+        </tr>
+      </table>
+
+    </div>
+  </nz-content>
+
+
+</nz-layout>
+
+

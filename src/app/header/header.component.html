@@ -1,0 +1,141 @@
+<header class="main-header">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a [routerLink]="['/']" class="navbar-brand">
+        <b>Coin</b>OTC</a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+
+        <li>
+          <a [routerLink]="['/']">首页</a>
+        </li>
+        <li class="dropdown">
+          <a class="routing_link" routerLink="/buy" class="dropdown-toggle" data-toggle="dropdown">购买
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a [routerLink]="['./ETH']">{{coinstyle1}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./XRP']">{{coinstyle2}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./XMR']">{{coinstyle3}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./XLM']">{{coinstyle4}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./ADA']">{{coinstyle5}}</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/sell']" class="dropdown-toggle" data-toggle="dropdown">出售
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a [routerLink]="['./ETH']">{{coinstyle1}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./XRP']">{{coinstyle2}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./XMR']">{{coinstyle3}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./XLM']">{{coinstyle4}}</a>
+            </li>
+            <li>
+              <a [routerLink]="['./ADA']">{{coinstyle5}}</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/adv']" class="dropdown-toggle" data-toggle="dropdown">发布广告
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a >{{coinstyle1}}</a>
+            </li>
+            <li>
+              <a href="#">{{coinstyle2}}</a>
+            </li>
+            <li>
+              <a href="#">{{coinstyle3}}</a>
+            </li>
+            <li>
+              <a href="#">{{coinstyle4}}</a>
+            </li>
+            <li>
+              <a href="#">{{coinstyle5}}</a>
+            </li>
+          </ul>
+        </li>
+        
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+          <a [routerLink]="['/order']" class="dropdown-toggle" data-toggle="dropdown">
+            <span style="margin-right:5px" class="glyphicon glyphicon-list-alt"></span>订单
+            <span class="caret"></span>
+          </a>
+         
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/wallet']" class="dropdown-toggle" data-toggle="dropdown">
+            <span style="margin-right:5px" class="glyphicon glyphicon-credit-card"></span>钱包
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Action</a>
+            </li>
+            <li>
+              <a href="#">Another action</a>
+            </li>
+            <li>
+              <a href="#">Something else here</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">Separated link</a>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a [routerLink]="['/user']" class="dropdown-toggle" data-toggle="dropdown">
+            <span style="margin-right:5px" class="glyphicon glyphicon-user"></span>用户中心
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">用户中心</a>
+            </li>
+            <li>
+              <a href="#">我的广告</a>
+            </li>
+            <li>
+              <a href="#">退出</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+
+</header>
