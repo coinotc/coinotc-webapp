@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { OrderInformation } from '../../shared/orderinformation';
-import { OrderService } from '../services/order.service'
-import { UserService } from '../services/user.service';
-
 
 @Component({
   selector: 'app-order',
@@ -36,8 +33,8 @@ export class OrderComponent implements OnInit {
   private order: Observable<any>;
 
 
-  constructor(private orderServiceProvider: OrderService, private userService:UserService) { 
-    this.user = this.userService.getCurrentUser();
+  constructor() { 
+   
   }
 
   ngOnInit() {

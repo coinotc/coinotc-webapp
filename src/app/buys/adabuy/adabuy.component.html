@@ -1,0 +1,31 @@
+<nz-layout class="layout">
+    <nz-content>
+        <div>
+          <table class="table" style="margin:30px 60px">
+            <tr>
+              <th>昵称</th>
+              <th>信用</th>
+              <th>付款方式</th>
+              <th>限额</th>
+              <th>价格</th>
+              <th></th>
+            </tr>
+            <tr *ngFor="let adabuy of adabuys |async">
+              <td>{{adabuy.owner}}</td>
+              <td>{{adabuy.massage}}</td>
+              <td>{{adabuy.payment}}</td>
+              <td>{{adabuy.limit}}</td>
+              <td>{{adabuy.price}}</td>
+              <td>
+                  <button nz-button [nzType]="'primary'" >
+                    <a routerLink="/orderhome" (click)="showoff()">
+                  <span>购买</span>
+                    </a>
+                </button>
+              </td>
+            </tr>
+          </table>
+    
+        </div>
+      </nz-content>
+    </nz-layout>

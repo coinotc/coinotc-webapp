@@ -1,12 +1,12 @@
 <nz-layout class="layout">
   <div style="padding:60px 60px 100px">
     <div>
-      <h2>发布一个 ? 交易广告</h2>
+      <h2>发布交易广告</h2>
     </div>
     <div style="padding:40px 0px 0px">
-      <h5 style="margin-top:10px">如果您经常交易 ?，可以发布自己的 ? 交易广告。如果您只想购买或出售一次，我们建议您直接从购买或出售列表中下单交易。</h5>
+      <!-- <h5 style="margin-top:10px">如果您经常交易 ?，可以发布自己的 ? 交易广告。如果您只想购买或出售一次，我们建议您直接从购买或出售列表中下单交易。</h5> -->
       <h5 style="margin-top:10px">发布一则交易广告是免费的。</h5>
-      <h5 style="margin-top:10px">您的 CoinOTC 钱包中至少需要有0.05 .，您的广告才会显示在交易列表中。</h5>
+      <!-- <h5 style="margin-top:10px">您的 CoinOTC 钱包中至少需要有0.05 .，您的广告才会显示在交易列表中。</h5> -->
       <h5 style="margin-top:10px">发布交易广告的 CoinCola 用户每笔完成的交易需要缴纳 0.7% 的费用。</h5>
       <h5 style="margin-top:10px">您必须在交易广告或交易聊天中提供您的付款详细信息，发起交易后，价格会锁定，除非定价中有明显的错误。</h5>
       <h5 style="margin-top:10px">所有交流必须在 CoinOTC 上进行，请注意高风险有欺诈风险的付款方式。</h5>
@@ -16,13 +16,13 @@
     <hr style="color:black">
 
     <h4 style="margin-bottom: 30px">选择广告类型：
-      <small>您想要创建什么样的交易广告？如果您希望出售 ?，请确保您在 CoinCola.com 的钱包中有 ?。</small>
+      <!-- <small>您想要创建什么样的交易广告？如果您希望出售 ?，请确保您在 CoinCola.com 的钱包中有 ?。</small> -->
     </h4>
-    <nz-radio-group [(ngModel)]="radioValue">
-      <label nz-radio [nzValue]="'A'">
+    <nz-radio-group [(ngModel)]="advertisement.type">
+      <label nz-radio [nzValue]="'0'">
         <span style="font-size:15px;margin-right: 30px">在线出售</span>
       </label>
-      <label nz-radio [nzValue]="'B'">
+      <label nz-radio [nzValue]="'1'">
         <span style="font-size:15px">在线购买</span>
       </label>
     </nz-radio-group>
@@ -30,7 +30,7 @@
     <h4 style="margin: 40px 0px 20px">所在地:
       <small>请选择你要发布广告的国家。</small>
     </h4>
-    <nz-select style="width: 400px;" [(ngModel)]="country">
+    <nz-select style="width: 400px;" [(ngModel)]="advertisement.country"  [nzPlaceHolder]="'请选择国家地区'">
       <nz-option *ngFor="let country of countries" [nzLabel]="country.label" [nzValue]="country.value" >
       </nz-option>
     </nz-select>
@@ -38,61 +38,63 @@
     <h4 style="margin: 40px 0px 20px">货币:
       <small>您希望交易付款的货币类型。</small>
     </h4>
-    <nz-select style="width: 400px;" [(ngModel)]="crypto">
+    <nz-select style="width: 400px;"  [nzPlaceHolder]="'售出的货币类型'" [(ngModel)]="advertisement.crypto">
       <nz-option *ngFor="let crypto of cryptos" [nzLabel]="crypto.label" [nzValue]="crypto.value" >
       </nz-option>
     </nz-select>
 
    
-    <nz-select style="width: 400px;" [(ngModel)]="single">
-      <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
+    <nz-select style="width: 400px;"  [nzPlaceHolder]="'用何种货币购买'" [(ngModel)]="advertisement.fiat" [(ngModel)]="fiat">
+      <nz-option *ngFor="let fiat of fiats" [nzLabel]="fiat.label" [nzValue]="fiat.value" >
       </nz-option>
     </nz-select>
 
     <h4 style="margin: 40px 0px 20px">价格:
-      <small>基于溢价比例得出的报价，10分钟更新一次。</small>
+      
     </h4>
-    <nz-select style="width: 400px;" [(ngModel)]="single">
-      <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
-      </nz-option>
-    </nz-select>
+     <nz-input style="width: 400px;" [(ngModel)]="advertisement.price" [nzPlaceHolder]="'price'"></nz-input>
+    <p>{{inputValue}}</p>
 
-    <h4 style="margin: 40px 0px 20px">最低价（选填）:
-      <small>广告最低可成交的价格，可帮助您在价格剧烈波动时保持稳定的盈利，比如最低价为12000，市场价处于12000以下时，您的广告将依旧以12000的价格展示出来。
-      </small>
+
+    <!-- <h4 style="margin: 40px 0px 20px">最低价（选填）:
+     
     </h4>
     <nz-select style="width: 400px;" [(ngModel)]="single">
       <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
       </nz-option>
-    </nz-select>
+    </nz-select> -->
 
     <h4 style="margin: 40px 0px 20px">最小限额:
       <small>一次交易的最低的交易限制。</small>
     </h4>
-    <nz-select style="width: 400px;" [(ngModel)]="single">
-      <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
-      </nz-option>
-    </nz-select>
+        <nz-input style="width: 400px;" [(ngModel)]="advertisement.min_price" [nzPlaceHolder]="' min_price'" ></nz-input>
+    <p>{{inputValue}}</p>
+
 
     <h4 style="margin: 40px 0px 20px">最大限额:
       <small>一次交易中的最大交易限制，您的钱包余额也会影响最大量的设置。</small>
     </h4>
-    <nz-select style="width: 400px;" [(ngModel)]="single">
-      <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
-      </nz-option>
-    </nz-select>
+    <nz-input style="width: 400px;" [(ngModel)]="advertisement.max_price" [nzPlaceHolder]="'max_price'" ></nz-input>
+    <p>{{inputValue}}</p>
+
+    <h4 style="margin: 40px 0px 20px">时间限制:
+      <small>在该时间后，交易自动关闭。</small>
+    </h4>
+    <nz-input style="width: 400px;" [(ngModel)]="advertisement.limit" [nzPlaceHolder]="'10'" ></nz-input>
+    <p>{{inputValue}}</p>
+
 
     <h4 style="margin: 40px 0px 20px">收款方式:</h4>
-    <nz-select style="width: 400px;" [(ngModel)]="single">
-      <nz-option *ngFor="let option of options" [nzLabel]="option.label" [nzValue]="option.value" [nzDisabled]="option.disabled">
+    <nz-select style="width: 400px;" [(ngModel)]="advertisement.payment"  [nzPlaceHolder]="'payment'">
+      <nz-option *ngFor="let payment of payments"  [nzLabel]="payment.label" [nzValue]="payment.value" >
       </nz-option>
     </nz-select>
 
     <h4 style="margin: 40px 0px 20px">留言:</h4>
-    <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
+    <nz-input [(ngModel)]="advertisement.massage" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
 
     <div style="text-align:center;margin-top:80px">
-      <button nz-button [nzType]="'primary'" style="width:180px;height:50px">
+      <button nz-button [nzType]="'primary'"  style="width:180px;height:50px" (click)="addadvertisement()" >
         <span style="width:120;height:40">立即发布</span>
       </button>
     </div>

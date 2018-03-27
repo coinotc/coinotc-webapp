@@ -1,0 +1,30 @@
+<nz-layout class="layout">
+  
+
+  <nz-content>
+    <div>
+      <table class="table" style="margin:30px 60px">
+        <tr>
+          <th>昵称</th>
+          <th>类型</th>
+          <th>付款方式</th>
+          <th>限额</th>
+          <th>价格</th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let sell of sells | async">
+          
+          
+          <td>{{sell.owner}}</td>
+          <td>{{sell.crypto}}</td>
+          <td>{{sell.payment}}</td>
+          <td>{{sell.limit}}</td>
+          <td>{{sell.price}}</td>
+        </tr>
+      </table>
+
+    </div>
+  </nz-content>
+
+
+</nz-layout>

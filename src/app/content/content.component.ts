@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { advertisement } from '../models/advertisement';
+import { AdvService } from '../services/adv.service';
+// import { CarouselConfig } from 'ngx-bootstrap/carousel';
 
 @Component({
   selector: 'app-content',
@@ -8,13 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  array = [ 1, 2, 3 ];
+  // providers: [
+  //   { provide: CarouselConfig, useValue: { interval: 1500, noPause: true, showIndicators: true } }
+  // ]
+  array = [ 1 ];
+
+ 
 
   
   
+
+  model = new advertisement("xjy", true, '', '', '', null, null, null, '', null, '',null)
   
   
-  constructor() {
+  
+  constructor(private advservice:AdvService) {
   
    }
 

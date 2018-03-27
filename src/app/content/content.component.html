@@ -3,7 +3,7 @@
 
   <!-- Main content -->
   <section>
-    <nz-carousel>
+    <nz-carousel nzAutoPlay>
       <div nz-carousel-content *ngFor="let index of array">
         <h3>{{index}}</h3>
       </div>
@@ -41,9 +41,9 @@
           <i class="anticon anticon-github"></i>
           <div >
             <ul>
-            <li>交易价格:</li>
-            <li>交易限额:</li>
-            <li>付款方式:</li>
+            <li>交易价格:{{model.price}}</li>
+            <li>交易限额:{{model.limit}}</li>
+            <li>付款方式:{{model.payment}}</li>
           </ul>
           </div>
         </div>
