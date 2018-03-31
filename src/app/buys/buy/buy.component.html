@@ -3,7 +3,7 @@
 
   <nz-content>
     <div>
-      <table class="table" style="margin:30px 60px">
+      <table class="table" style="margin:10px 80px 0px 80px">
         <tr>
           <th>昵称</th>
           <th>类型</th>
@@ -12,23 +12,27 @@
           <th>价格</th>
           <th></th>
         </tr>
-        <tr *ngFor="let buy of buys">
-          
-          
+        <!-- <a [routerLink]="['/orderhome', buy.id]"> -->
+        <tr *ngFor="let buy of buys" >
+           
+         
           <td>{{buy.owner}}</td>
           <td>{{buy.crypto}}</td>
           <td>{{buy.payment}}</td>
           <td>{{buy.limit}}</td>
           <td>{{buy.price}}</td>
+     
+          
           <td>
-            
-              <a routerLink="/orderhome" >
-                <button nz-button [nzType]="'primary'" (click)="showoff()">
+          
+          <button nz-button [nzType]="'primary'" >
+              <a routerLink="/information" (click)="showoff(buy)" >
             <span>购买</span>
-                </button>
               </a>
-         
+            </button>
+            
         </td>
+       
         </tr>
       </table>
 

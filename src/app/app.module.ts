@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AdvService } from '../app/services/adv.service'
+import { ShowcontrolService } from '../app/services/showcontrol.service'
 // import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
@@ -29,6 +30,15 @@ import { XlmsellComponent } from './sells/xlmsell/xlmsell.component';
 import { AdasellComponent } from './sells/adasell/adasell.component';
 import { SellComponent } from './sells/sell/sell.component';
 import { HomeComponent } from './order/home/home.component';
+import { InformationComponent } from './information/information.component';
+import { UserComponent } from './user/user.component';
+import { MyAdvertisementComponent } from './my-advertisement/my-advertisement.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { UserVerificationComponent } from './user/user-verification/user-verification.component';
+import { AccountOptionsComponent } from './user/account-options/account-options.component';
+import { UserTrustedComponent } from './user/user-trusted/user-trusted.component';
+import { UserTrustingComponent } from './user/user-trusting/user-trusting.component';
+import { UserBlockingComponent } from './user/user-blocking/user-blocking.component';
 
 
 
@@ -56,6 +66,15 @@ import { HomeComponent } from './order/home/home.component';
     AdasellComponent,
     SellComponent,
     HomeComponent,
+    InformationComponent,
+    UserComponent,
+    MyAdvertisementComponent,
+    UserProfileComponent,
+    UserVerificationComponent,
+    AccountOptionsComponent,
+    UserTrustedComponent,
+    UserTrustingComponent,
+    UserBlockingComponent,
     
   ],
   imports: [
@@ -68,7 +87,7 @@ import { HomeComponent } from './order/home/home.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [AdvService],
+  providers: [AdvService,ShowcontrolService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,30 @@
+
+
+.dropdown-menu{
+    box-shadow: 5px 5px 5px #888888; 
+    min-width:10px;                /* 很关键 */
+    background-color: white
+
+}
+
+.navbar-right .dropdown-menu>li{
+    
+    /* height: 30px; */
+    line-height: 30px;
+   
+    
+}
+
+.dropdown-menu>li>a{
+    /* height: 30px; */
+    line-height: 30px;
+   
+
+    
+    text-align: center;
+}
+
+
+/* .collapse navbar-collapse>ul>li>a{
+    color:#e09826
+} */

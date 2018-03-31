@@ -1,0 +1,46 @@
+<div class="header">
+  <div>
+    <h4 style="color:rgba(75, 64, 4, 0.795);text-shadow:5px 5px 5px #888888">
+      <strong>基本信息</strong>
+    </h4>
+    <span style="margin-left:25px">detail</span>
+    <i class="anticon anticon-down-square"></i>
+  </div>
+
+  <div class="content">
+    <div nz-row>
+      <div nz-col [nzSpan]="2" [nzOffset]="1" style="margin-top:20px">
+        <p>一个头像</p>
+        <p>的位置刚刚</p>
+        <p>好占满</p>
+      </div>
+
+      <div class="information" nz-col [nzSpan]="8">
+        <h3>
+          <strong>username</strong>
+        </h3>
+
+        <ul style="margin-top:40px">
+          <li>身份验证: &nbsp; &nbsp; <a routerLink='/userVerification'>未验证</a></li>
+          <li>电子邮件: &nbsp; &nbsp; <a routerLink='/'>未验证</a></li>
+          <li>手机号码: &nbsp;&nbsp; &nbsp;已验证</li>
+          <li>注册时间:</li>
+          <li>第一次交易时间:</li>
+          <li>语言: </li>
+          <li>信任人数: </li>
+          <li>累计交易次数: </li>
+          <li>累计交易量: </li>
+        </ul>
+
+        <nz-input [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'6'" style="margin-top:30px; width:400px" [nzPlaceHolder]="'简介，关于您的介绍消息，不超过200个字'"></nz-input>
+
+        <button nz-button [nzType]="'primary'" style="margin-top:20px;width:160px;height:40px" >
+          <span>保存</span>
+        </button>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>

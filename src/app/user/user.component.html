@@ -1,0 +1,43 @@
+<nz-layout class="layout">
+<div nz-row>
+    <div style="margin:50px 60px 10px" nz-col [nzSpan]="3">
+      <div style="background:#d8901d;padding:8px 20px;;box-shadow:5px 5px 5px #888888" >
+        <h4 style="color:aliceblue;text-align: center" >用户中心</h4>
+      </div >
+      <div class="list">
+      <div>
+        <ul >
+          <li style="font-size:20px"><i class="anticon anticon-user"></i><strong>用户资料</strong></li>
+          <li><a style="color:rgba(75, 64, 4, 0.795)" routerLink='./userProfile'> {{msg1}}</a></li>
+          <li><a style="color:rgba(75, 64, 4, 0.795)" routerLink='./userVerification'> {{msg2}}</a></li>
+        </ul>
+      </div>
+      <br>
+      <div>
+        <ul>
+            <li style="font-size:20px"><i class="anticon anticon-lock"></i><strong>账户安全</strong></li>
+            <li><a style="color:rgba(75, 64, 4, 0.795)" routerLink='./accountOption'> {{msg3}}</a></li>
+        </ul>
+      </div>
+      <br>
+      <div>
+        <ul>
+            <li style="font-size:20px"><i class="anticon anticon-star"></i><strong>信用查询</strong></li>
+            <li><a style="color:rgba(75, 64, 4, 0.795)" routerLink='./userTrusted'> {{msg4}}</a></li>
+            <li><a style="color:rgba(75, 64, 4, 0.795)" routerLink='./userTrusting'> {{msg5}}</a></li>
+            <li><a style="color:rgba(75, 64, 4, 0.795)" routerLink='./userBlocking'> {{msg6}}</a></li>
+        </ul>
+      </div>
+    </div>
+    
+      </div>
+
+      <div nz-col [nzSpan]="16">
+        <router-outlet></router-outlet>
+
+      </div>
+  
+  
+   
+  </div>
+  </nz-layout>

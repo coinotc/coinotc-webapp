@@ -1,0 +1,9 @@
+.table>tbody>tr>td{
+    font-size: 15px;
+    color: rgba(75, 64, 4, 0.795)
+  }
+
+  .table>tbody>tr{
+    font-size: 15px;
+    color: black
+  }

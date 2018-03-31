@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { advertisement } from '../../models/advertisement'
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,12 +10,20 @@ import { advertisement } from '../../models/advertisement'
 })
 export class HomeComponent implements OnInit {
 
-  // @Input() buy:advertisement;
 
 
-  constructor() { }
 
-  ngOnInit() {
+  constructor() { 
+     
   }
 
+  
+
+  ngOnInit() {
+   
+  }
+
+  
 }
+
+

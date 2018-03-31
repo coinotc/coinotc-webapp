@@ -1,0 +1,26 @@
+.header{
+    margin:28px 0px 10px
+}
+
+.blank{
+    margin: 20px 0px 20px;
+    border: 1px solid;
+    height: 478px;
+    width: 100%;
+    color: rgb(213, 221, 235);
+    background-color: white;
+    
+}
+
+.blank>h3{
+position: absolute;
+  display: table;
+  height: auto;
+  width: 150px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: solid 1px white;
+}

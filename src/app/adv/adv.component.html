@@ -94,9 +94,11 @@
     <nz-input [(ngModel)]="advertisement.massage" [nzType]="'textarea'" [nzRows]="'4'" [nzPlaceHolder]="''"></nz-input>
 
     <div style="text-align:center;margin-top:80px">
-      <button nz-button [nzType]="'primary'"  style="width:180px;height:50px" (click)="addadvertisement()" >
+      <a routerLink='/'>
+        <button nz-button [nzType]="'primary'"  style="width:180px;height:50px" (click)="addadvertisement()" >
         <span style="width:120;height:40">立即发布</span>
       </button>
+    </a>
     </div>
 
   </div>

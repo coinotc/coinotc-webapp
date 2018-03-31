@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AdvService } from '../services/adv.service';
 import { advertisement } from '../models/advertisement'
 import { Observable } from 'rxjs/Rx'
+
+
 // import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 
@@ -52,7 +54,7 @@ export class AdvComponent implements OnInit {
       
     ];
 
-    
+   
 
     addadvertisement(){
       console.log(this.advertisement)

@@ -20,12 +20,14 @@ export class ContentComponent implements OnInit {
   
   
 
-  model = new advertisement("xjy", true, '', '', '', null, null, null, '', null, '',null)
+  private models : advertisement[]
   
   
   
   constructor(private advservice:AdvService) {
-  
+    this.advservice.getadvertisement('ETH',0).subscribe(result=>{
+      this.models = result
+    })
    }
 
   ngOnInit() {

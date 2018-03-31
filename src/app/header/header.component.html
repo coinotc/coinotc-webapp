@@ -3,7 +3,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a routerLink="/" class="navbar-brand">
-        <b>Coin</b>OTC</a>
+        <span ><b>Coin</b>OTC</span></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
         <i class="fa fa-bars"></i>
       </button>
@@ -14,22 +14,22 @@
       <ul class="nav navbar-nav">
 
         <li>
-          <a routerLink="/" (click)="showoff()">首页</a>
+          <a routerLink="/" (click)="showoff()" style="color:#e09826">首页</a>
         </li>
-        <li class="dropdown">
-          <a class="routing_link" routerLink="/buy"  (click)="showonBuy()"  data-toggle="dropdown">购买
+        <li >
+          <a class="routing_link" routerLink="/buy"  (click)="showonBuy()"  data-toggle="dropdown" style="color:#e09826">购买
             
           </a>
          
         </li>
-        <li class="dropdown">
-          <a  [routerLink]="['/sell']"  (click)="showonSell()" data-toggle="dropdown">出售
+        <li >
+          <a  [routerLink]="['/sell']"  (click)="showonSell()" style="color:#e09826">出售
            
           </a>
          
         </li>
         <li >
-          <a [routerLink]="['/adv']" data-toggle="dropdown" (click)="showoff()">发布广告
+          <a [routerLink]="['/adv']"  (click)="showoff()" style="color:#e09826">发布广告
             
           </a>
           
@@ -39,48 +39,50 @@
 
       <ul class="nav navbar-nav navbar-right">
 
-        <li class="dropdown">
-          <a [routerLink]="['/order']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
-            <span style="margin-right:5px" class="glyphicon glyphicon-list-alt" ></span>订单
-            <span class="caret" ></span>
+        <li >
+          <a [routerLink]="['/order']"  (click)="showoff()">
+            <span style="margin-right:5px;color:#e6e0d6" class="glyphicon glyphicon-list-alt" ></span>
+            &nbsp;<span style="color:#e09826">订单</span>
           </a>
          
         </li>
-        <li class="dropdown">
+        <li  >
           <a [routerLink]="['/wallet']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
-            <span style="margin-right:5px" class="glyphicon glyphicon-credit-card" ></span>钱包
-            <span class="caret" ></span>
+            <span style="margin-right:5p;color:#e6e0d6" class="glyphicon glyphicon-credit-card" ></span>
+            &nbsp;&nbsp;&nbsp;<span style="color:#e09826">钱包</span>
+            <span style="color:white" class="caret" ></span>
           </a>
-          <ul class="dropdown-menu" role="menu">
+          
+          <ul class="dropdown-menu" role="menu" style="width:93px">
             <li>
-              <a href="#">Action</a>
+              <a href="#">穷</a>
             </li>
             <li>
-              <a href="#">Another action</a>
+              <a href="#">没钱</a>
             </li>
-            <li>
-              <a href="#">Something else here</a>
+            <li style="padding-bottom:5px">
+              <a href="#">告辞</a>
             </li>
-            <li class="divider"></li>
-            <li>
-              <a href="#">Separated link</a>
-            </li>
+           
+            
           </ul>
         </li>
-        <li class="dropdown">
+        <li >
           <a [routerLink]="['/user']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
-            <span style="margin-right:5px" class="glyphicon glyphicon-user" ></span>用户中心
-            <span class="caret" ></span>
+            <span style="margin-right:10px;color:#aaa" class="glyphicon glyphicon-user" ></span>
+            <span style="color:#e09826">用户中心</span>
+            <span style="color:white" class="caret" ></span>
           </a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu" style="width:118px">
             <li>
-              <a href="#">用户中心</a>
+              <a routerLink='/user'>用户中心</a>
             </li>
             <li>
-              <a href="#">我的广告</a>
+              <a routerLink='/myadv'>我的广告</a>
             </li>
-            <li>
-              <a href="#">退出</a>
+            <li class="divider" style="height:2px"></li>
+            <li style="padding-bottom:5px">
+              <a routerLink='/logout' >退出</a>
             </li>
           </ul>
         </li>

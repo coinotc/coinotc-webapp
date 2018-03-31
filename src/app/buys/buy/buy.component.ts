@@ -3,6 +3,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AdvService } from '../../services/adv.service'
 import { advertisement } from '../../models/advertisement'
 import { Observable } from 'rxjs/Rx'
+import { ShowcontrolService } from '../../services/showcontrol.service'
+// import { InformationService } from '../../services/information.service'
 
 @Component({
   selector: 'app-buy',
@@ -10,16 +12,17 @@ import { Observable } from 'rxjs/Rx'
   styleUrls: ['./buy.component.css']
 })
 export class BuyComponent implements OnInit {
-  // @Input()buy: advertisement[];
 
-  
 
  private buys:advertisement[];
 
-  constructor(private advservice:AdvService ) {
+
+
+  constructor(private advservice:AdvService,private showcontrolSvc :ShowcontrolService) {
   //  this.advservice.getadvertisement("ETH",1).subscribe(result=>{
   //    this.buys = result
   //  })
+
 
 
   this.advservice.getTypeadvertisement(0).subscribe(result=>{
@@ -27,18 +30,20 @@ export class BuyComponent implements OnInit {
   })
 
 
-  // this.advservice.getadvertisement('',0).subscribe(result=>{
-  //   this.buys = result;
-  // })
+  
    }
    
-   
+   showoff(buy){
+    this.showcontrolSvc.toggleShowAndHideBuy(false)
+    this.showcontrolSvc.toggleShowAndHideSell(false)
 
- 
+  }
+
+
 
   ngOnInit() {
-    
-    
-  }
+    }
+
+   
 
 }
