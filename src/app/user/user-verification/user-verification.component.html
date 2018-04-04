@@ -1,0 +1,130 @@
+<div class="header">
+  <div>
+    <h4 style="color:rgba(75, 64, 4, 0.795)">
+      <strong>身份验证</strong>
+    </h4>
+    <span style="margin-left:25px">detail</span>
+    <i class="anticon anticon-down-square"></i>
+  </div>
+</div>
+
+<div class="blank">
+  <div class="tips">
+    <p>
+      <i class="anticon anticon-exclamation-circle-o" style="margin-right:10px;color:red"></i>
+      为确保交易安全，保障您的合法权益，请您完成身份验证！ 我们提供安全高效实时联网的官方身份认证服务，具有更高级别的安全保护。 身份验证一旦成功，不予修改和解除认证。建议您谨慎选择，真实填写。
+    </p>
+
+  </div>
+  <div class="verification" *ngIf="verify">
+    <div class="done">
+      <i class="anticon anticon-idcard"></i>
+      <span>身份证</span>
+      <button nz-button [nzType]="'primary'" nzGhost>
+        <span>已验证</span>
+      </button>
+
+    </div>
+    <p>
+      <i class="anticon anticon-check-circle-o"></i>您已完成证件认证</p>
+
+  </div>
+
+
+
+
+
+
+  <div class="notyet">
+      <i class="anticon anticon-idcard"></i>
+      <span>身份证</span>
+      <button nz-button [nzType]="'primary'" nzGhost (click)="showModal1()">
+        <span>立即验证</span>
+      </button>
+      </div>
+  
+
+
+    <div class="notyet">
+        <i class="anticon anticon-camera-o"></i>
+      <span>护照</span>
+      <button nz-button [nzType]="'primary'" nzGhost (click)="showModal2()">
+        <span>立即验证</span>
+      </button>
+      </div>
+
+
+
+    <div class="notyet">
+      <i class="anticon anticon-idcard"></i>
+      <span>驾照</span>
+      <button nz-button [nzType]="'primary'" nzGhost (click)="showModal3()">
+        <span>立即验证</span>
+      </button>
+      </div>
+  
+  
+    </div>
+
+
+
+   <!-- modal -->
+    <nz-modal [nzVisible]="isVisible1"  [nzTitle]="'身份证验证'" [nzContent]="idContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading">
+    <ng-template #idContent>
+      <div class="alert">
+        <div>
+        <span style="font-size:15px">国家/地区：</span> <nz-select style="width: 400px;"   [nzPlaceHolder]="'请选择国家地区'">
+          <nz-option *ngFor="let country of countries" [nzLabel]="country.label" [nzValue]="country.value" >
+          </nz-option>
+        </nz-select>
+      </div>
+      <div>
+        <span style="font-size:15px">姓名：</span> <nz-input style="width: 400px;height:40px"  [nzPlaceHolder]="'真实姓名'" ></nz-input>
+      </div>
+      <div>
+        <span style="font-size:15px">身份证号：</span> <nz-input style="width: 400px;"  [nzPlaceHolder]="'请输入身份证号码'" ></nz-input>
+      </div>
+     <div style="margin-top:20px;color:crimson">* 请确保以上输入都是您的真实信息</div>
+      </div>
+    </ng-template>
+  </nz-modal>
+
+  <nz-modal [nzVisible]="isVisible2"  [nzTitle]="'护照证验证'" [nzContent]="ppContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading">
+    <ng-template #ppContent>
+        <div class="alert">
+            <div>
+            <span style="font-size:15px">国家/地区：</span> <nz-select style="width: 400px"   [nzPlaceHolder]="'请选择国家地区'">
+              <nz-option *ngFor="let country of countries" [nzLabel]="country.label" [nzValue]="country.value" >
+              </nz-option>
+            </nz-select>
+          </div>
+          <div>
+            <span style="font-size:15px">姓名：</span> <nz-input style="width: 400px;"  [nzPlaceHolder]="'请输入真实姓名'" ></nz-input>
+          </div>
+          <div>
+            <span style="font-size:15px">证件号码：</span> <nz-input style="width: 400px;"  [nzPlaceHolder]="'请输入证件号码'" ></nz-input>
+          </div>
+         <div style="margin-top:20px;color:crimson">* 请确保以上输入都是您的真实信息</div>
+          </div>
+    </ng-template>
+  </nz-modal>
+
+  <nz-modal [nzVisible]="isVisible3"  [nzTitle]="'驾照证验证'" [nzContent]="dContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading">
+    <ng-template #dContent>
+        <div class="alert">
+            <div>
+            <span style="font-size:15px">国家/地区：</span> <nz-select style="width: 400px"   [nzPlaceHolder]="'请选择国家地区'">
+              <nz-option *ngFor="let country of countries" [nzLabel]="country.label" [nzValue]="country.value" >
+              </nz-option>
+            </nz-select>
+          </div>
+          <div>
+            <span style="font-size:15px">姓名：</span> <nz-input style="width: 400px;"  [nzPlaceHolder]="'请输入真实姓名'" ></nz-input>
+          </div>
+          <div>
+            <span style="font-size:15px">证件号码：</span> <nz-input style="width: 400px;"  [nzPlaceHolder]="'请输入证件号码'" ></nz-input>
+          </div>
+         <div style="margin-top:20px;color:crimson">* 请确保以上输入都是您的真实信息</div>
+          </div>
+    </ng-template>
+  </nz-modal>

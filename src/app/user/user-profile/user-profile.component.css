@@ -1,0 +1,39 @@
+.header{
+    margin:28px 0px 10px;
+    
+}
+
+.content{
+    margin: 20px 0px 20px;
+    border: 1px solid;
+    height: 100%;
+    width: 100%;
+    color: rgb(213, 221, 235);
+    background-color: white;
+}
+
+.information{
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.information>ul>li{
+    font-size: 15px;
+    color: #222;
+    margin-top: 20px;
+    
+    
+}
+
+.image{ 
+    width:90px; 
+    height:90px; 
+    border-radius:50px; 
+    } 
+
+
+    .alert>div{
+        margin: 10px 20px;
+    }
+    
+

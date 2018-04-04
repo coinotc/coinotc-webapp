@@ -1,0 +1,42 @@
+.header{
+    margin:28px 0px 10px
+}
+
+.blank{
+    margin: 20px 0px ;
+    border: 1px solid;
+    height: 525px;
+    width: 100%;
+    color: rgb(214, 214, 209);
+    background-color: white;
+    
+}
+
+.blank>h3{
+position: absolute;
+  display: table;
+  height: auto;
+  width: 250px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: solid 1px white;
+}
+
+.table{
+    color: black;
+    background-color:rgb(235, 236, 236);
+    height: 50px;
+  }
+
+  .gap>th{
+      padding-top: 16px  ;
+      margin-bottom: 20px;
+  }
+
+
+/* #ant{
+    margin-bottom:0px ;
+} */

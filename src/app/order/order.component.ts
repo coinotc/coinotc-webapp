@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { OrderInformation } from '../../shared/orderinformation';
-import { OrderService } from '../services/order.service'
-import { UserService } from '../services/user.service';
-
 
 @Component({
   selector: 'app-order',
@@ -14,30 +11,19 @@ export class OrderComponent implements OnInit {
 
   tabs = [
     {
-      name   : '正在买'
+      name   : '进行中'
     },
     {
-      name   : '正在卖'
-    },
-    {
-      name   : '已买'
-    },
-    {
-      name   : '已卖'
+      name   : '已结束'
     }
   ];
 
-  private buyerActiveOrders: OrderInformation[];
-  private sellerActiveOrders: OrderInformation[];
-  private buyerFinishedOrders: OrderInformation[];
-  private sellerFinishedOrders: OrderInformation[];
-  private user;
-
-  private order: Observable<any>;
+ 
+orders:[1,2,3,4,5,6,7,8,9]
 
 
-  constructor(private orderServiceProvider: OrderService, private userService:UserService) { 
-    this.user = this.userService.getCurrentUser();
+  constructor() { 
+   
   }
 
   ngOnInit() {

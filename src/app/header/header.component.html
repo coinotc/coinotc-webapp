@@ -2,8 +2,8 @@
 
   <div class="container-fluid">
     <div class="navbar-header">
-      <a [routerLink]="['/']" class="navbar-brand">
-        <b>Coin</b>OTC</a>
+      <a routerLink="/" class="navbar-brand">
+        <span ><b>Coin</b>OTC</span></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
         <i class="fa fa-bars"></i>
       </button>
@@ -14,121 +14,75 @@
       <ul class="nav navbar-nav">
 
         <li>
-          <a [routerLink]="['/']">首页</a>
+          <a routerLink="/" (click)="showoff()" style="color:#e09826">首页</a>
         </li>
-        <li class="dropdown">
-          <a class="routing_link" routerLink="/buy" class="dropdown-toggle" data-toggle="dropdown">购买
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a [routerLink]="['./ETH']">{{coinstyle1}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./XRP']">{{coinstyle2}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./XMR']">{{coinstyle3}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./XLM']">{{coinstyle4}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./ADA']">{{coinstyle5}}</a>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a [routerLink]="['/sell']" class="dropdown-toggle" data-toggle="dropdown">出售
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a [routerLink]="['./ETH']">{{coinstyle1}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./XRP']">{{coinstyle2}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./XMR']">{{coinstyle3}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./XLM']">{{coinstyle4}}</a>
-            </li>
-            <li>
-              <a [routerLink]="['./ADA']">{{coinstyle5}}</a>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a [routerLink]="['/adv']" class="dropdown-toggle" data-toggle="dropdown">发布广告
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <a >{{coinstyle1}}</a>
-            </li>
-            <li>
-              <a href="#">{{coinstyle2}}</a>
-            </li>
-            <li>
-              <a href="#">{{coinstyle3}}</a>
-            </li>
-            <li>
-              <a href="#">{{coinstyle4}}</a>
-            </li>
-            <li>
-              <a href="#">{{coinstyle5}}</a>
-            </li>
-          </ul>
-        </li>
-        
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-
-        <li class="dropdown">
-          <a [routerLink]="['/order']" class="dropdown-toggle" data-toggle="dropdown">
-            <span style="margin-right:5px" class="glyphicon glyphicon-list-alt"></span>订单
-            <span class="caret"></span>
+        <li >
+          <a class="routing_link" routerLink="/buy"  (click)="showonBuy()"  data-toggle="dropdown" style="color:#e09826">购买
+            
           </a>
          
         </li>
-        <li class="dropdown">
-          <a [routerLink]="['/wallet']" class="dropdown-toggle" data-toggle="dropdown">
-            <span style="margin-right:5px" class="glyphicon glyphicon-credit-card"></span>钱包
-            <span class="caret"></span>
+        <li >
+          <a  [routerLink]="['/sell']"  (click)="showonSell()" style="color:#e09826">出售
+           
           </a>
-          <ul class="dropdown-menu" role="menu">
+         
+        </li>
+        <li >
+          <a [routerLink]="['/adv']"  (click)="showoff()" style="color:#e09826">发布广告
+            
+          </a>
+          
+        </li> 
+        
+      </ul> 
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li >
+          <a [routerLink]="['/order']"  (click)="showoff()">
+            <span style="margin-right:5px;color:#e6e0d6" class="glyphicon glyphicon-list-alt" ></span>
+            &nbsp;<span style="color:#e09826">订单</span>
+          </a>
+         
+        </li>
+        <li  >
+          <a [routerLink]="['/wallet']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
+            <span style="margin-right:5p;color:#e6e0d6" class="glyphicon glyphicon-credit-card" ></span>
+            &nbsp;&nbsp;&nbsp;<span style="color:#e09826" >钱包</span>
+            <span style="color:white" class="caret" ></span>
+          </a>
+          
+          <ul class="dropdown-menu" role="menu" style="width:102px">
             <li>
-              <a href="#">Action</a>
+              <a href="#">穷</a>
             </li>
             <li>
-              <a href="#">Another action</a>
+              <a href="#">没钱</a>
             </li>
-            <li>
-              <a href="#">Something else here</a>
+            <li style="padding-bottom:5px">
+              <a href="#">告辞</a>
             </li>
-            <li class="divider"></li>
-            <li>
-              <a href="#">Separated link</a>
-            </li>
+           
+            
           </ul>
         </li>
-        <li class="dropdown">
-          <a [routerLink]="['/user']" class="dropdown-toggle" data-toggle="dropdown">
-            <span style="margin-right:5px" class="glyphicon glyphicon-user"></span>用户中心
-            <span class="caret"></span>
+        <li >
+          <a [routerLink]="['/user/userProfile']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
+            <span style="margin-right:10px;color:#aaa" class="glyphicon glyphicon-user" ></span>
+            <span style="color:#e09826">用户中心</span>
+            <span style="color:white" class="caret" ></span>
           </a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu" style="width:130px">
             <li>
-              <a href="#">用户中心</a>
+              <a routerLink='/user/userProfile'>用户中心</a>
             </li>
             <li>
-              <a href="#">我的广告</a>
+              <a routerLink='/myadv/adsell'>我的广告</a>
             </li>
+            <li class="divider" style="height:2px"></li>
             <li>
-              <a href="#">退出</a>
+              <a routerLink='/logout' >退出</a>
             </li>
           </ul>
         </li>
@@ -139,3 +93,63 @@
   <!-- /.container-fluid -->
 
 </header>
+
+<nz-content *ngIf="showBuy">
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;padding-left :100px">
+        <li nz-menu-item>
+            <a routerLink="/ETHBuy" >
+          <strong>ETH</strong>
+            </a>        
+        </li>
+        <li nz-menu-item>
+            <a routerLink="/XRPBuy" >
+          <strong>XRP</strong>
+            </a>
+        </li>
+        <li nz-menu-item>
+            <a routerLink="/XMRBuy" >
+          <strong>XMR</strong>
+            </a>
+        </li>
+        <li nz-menu-item>
+            <a routerLink="/XLMBuy" >
+          <strong>XLM</strong>
+            </a>
+        </li>
+        <li nz-menu-item>
+            <a routerLink="/ADABuy" >
+          <strong>ADA</strong>
+            </a>
+        </li>
+      </ul>
+</nz-content>
+
+<nz-content *ngIf="showSell">
+  <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" style="line-height: 64px;padding-left :100px">
+      <li nz-menu-item>
+          <a routerLink="/ETHSell">
+        <strong>ETH</strong>
+          </a>        
+      </li>
+      <li nz-menu-item>
+          <a routerLink="/XRPSell">
+        <strong>XRP</strong>
+          </a>
+      </li>
+      <li nz-menu-item>
+          <a routerLink="/XMRSell">
+        <strong>XMR</strong>
+          </a>
+      </li>
+      <li nz-menu-item>
+          <a routerLink="/XLMSell">
+        <strong>XLM</strong>
+          </a>
+      </li>
+      <li nz-menu-item>
+          <a routerLink="/ADASell">
+        <strong>ADA</strong>
+          </a>
+      </li>
+    </ul>
+</nz-content>

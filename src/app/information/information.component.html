@@ -1,0 +1,65 @@
+<div class="content-wrapper">
+
+  <div nz-row>
+    <div nz-col [nzSpan]="3">
+        <span > 
+            <img class="image" src="../../assets/2.jpg" /> 
+            </span> 
+    </div>
+  
+  <div nz-col [nzSpan]="8" >
+    <h3 style="margin-top:30px"><strong>Jerry</strong></h3>
+    <div nz-row style="margin-top:30px">
+      <div nz-col [nzSpan]="6">
+        <p>交易总量</p>
+      </div>
+      <div nz-col [nzSpan]="6">
+        <p>信任次数</p>
+      </div>
+      <div nz-col [nzSpan]="6">
+        <p>好评率</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div style="margin-top:120px">
+    <ul>
+      <li><h3>报价</h3></li>
+      <li><h3>限额</h3></li>
+      <li><h3>交易方式</h3></li>
+    </ul>
+  </div>
+
+  <div style="margin-top:80px">
+    <h4>数量</h4>
+    <nz-input-number style="width: 300px;margin-top:20px" [(ngModel)]="demoValue" [nzSize]="'large'" [nzPlaceHolder]="'输入您想购买的金额'"></nz-input-number>
+    <strong><i class="anticon anticon-swap"></i></strong>
+    <nz-input-number style="width: 300px;margin-top:20px" [(ngModel)]="demoValue" [nzSize]="'large'" [nzPlaceHolder]="'输入您想购买的数量'"></nz-input-number>
+  </div>
+  <div >
+      <button nz-button [nzType]="'primary'" style="width: 633px;margin-top:20px">
+        <a routerLink='/orderhome'>
+          <span>确定购买</span>
+        </a>
+        </button>
+  </div>
+
+  <div>
+    <div style="margin-top:20px">
+      <h3>交易须知</h3>
+    </div>
+   
+    <div style="margin-top:20px">
+        1.交易前请详细了解对方的交易信息。<br>
+        2.请通过平台进行沟通约定，并保存好相关聊天记录。<br>
+        3.如遇到交易纠纷，可通过申诉来解决问题。<br>
+        4.在您发起交易请求后，交易币会被锁定在托管中，受到 CoinOTC 保护。如果您是买家，发起交易请求后，请在付款周期内付款并把交易标记为付款已完成。卖家在收到付款后将会放行处于托管中的交易币。<br>
+        5.交易前请阅读《CoinOTC服务条款》以及常见问题、交易指南等帮助文档。<br>5.请注意欺诈风险，交易前请检查该用户收到的评价和相关信用信息，并对新近创建的账户多加留意。<br>
+        6.托管服务保护网上交易的买卖双方。在发生争议的情况下，我们将评估所提供的所有信息，并将托管的交易币放行给其合法所有者。
+    </div>
+  </div>
+
+</div>

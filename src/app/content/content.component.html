@@ -2,9 +2,9 @@
   <!-- Content Header (Page header) -->
 
   <!-- Main content -->
-  <section>
-    <nz-carousel>
-      <div nz-carousel-content *ngFor="let index of array">
+  <section >
+    <nz-carousel nzAutoPlay >
+      <div nz-carousel-content *ngFor="let index of array" style="height:400px">
         <h3>{{index}}</h3>
       </div>
     </nz-carousel>

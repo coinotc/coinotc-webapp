@@ -1,23 +1,52 @@
 <nz-layout class="layout">
 
-  <div style="margin:20px 80px 60px">
-    <div style="background:#1798f2;padding:8px 20px">
+  <div style="margin:20px 40px 10px">
+    <div style="background:#d8901d;padding:8px 20px;;box-shadow:5px 5px 5px #888888">
       <h4 style="color:aliceblue">订单管理</h4>
     </div>
 
     
-
-    <nz-tabset [nzTabPosition]="'top'" [nzType]="'card'">
+    <div>
+    <nz-tabset >
       <nz-tab *ngFor="let tab of tabs">
         <ng-template #nzTabHeading>
-          {{tab.name}}
+          <strong style="  color:#b7812c;font-size:18px; margin:10px 20px">{{tab.name}}</strong>
         </ng-template>
         <span></span>
       </nz-tab>
+     
     </nz-tabset>
-    
+  
     <div>
+      <table class="table">
+       <tr class="gap">
+         <th style="padding-left:30px">交易伙伴</th>
+         <th>订单编号</th>
+         <th>类型</th>
+         <th>交易金额</th>
+         <th>交易数量</th>
+         <th>创建时间</th>
+         <th>交易状态</th>
+         <th>交易操作</th>
+       </tr>
+
+       <tr *ngFor="let a of orders">
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+         <td></td>
+       </tr>
+      </table>
+     </div>
 
     </div>
   </div>
+
+  <nz-content style="margin:0px 40px 10px">
+    <h2>信息详情</h2>
+  </nz-content>
 </nz-layout>

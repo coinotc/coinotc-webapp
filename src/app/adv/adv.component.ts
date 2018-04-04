@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AdvertisementService } from '../services/advertisement.service'
-import { adinformation } from '../../shared/adinform';
-import { UserService } from '../services/user.service';
+import { AdvService } from '../services/adv.service';
+import { advertisement } from '../models/advertisement'
+import { Observable } from 'rxjs/Rx'
+
+
+// import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-adv',
@@ -10,88 +14,54 @@ import { UserService } from '../services/user.service';
 })
 export class AdvComponent implements OnInit {
 
-  information = new adinformation('', true, 'ETHEREUM', 'singapore', 'SGD', null, null, null, '', null, '');
-  cryptoprice: number;
-  
-
-  constructor(
-    private adservice: AdvertisementService,
-    private userservice: UserService
-  ) {
-    this.adservice.getprice('Ethereum', 'SGD').subscribe(result => {
-      this.cryptoprice = Number(result[0].price_sgd);
-      this.information.price = this.cryptoprice;
-    });
+ 
+  constructor(   private advservice: AdvService ) {
+   
   }
 
-  getcryptoprice(){
-    switch (this.information.crypto) {
-      case 'ETH':
-      this.getfiatprice('Ethereum');
-      break;
-      case 'MONERO':
-      this.getfiatprice('MONERO');
-      break;
-      case 'RIPPLE':
-      this.getfiatprice('RIPPLE');
-      break;
-      case 'STELLAR':
-      this.getfiatprice('STELLAR');
-      break;
-      case 'CARDANO':
-      this.getfiatprice('CARDANO');
-      break;
+  // private advertisement: Observable<advertisement[]>;
+  advertisement = new advertisement('xjy', true, '', '', '', null, null, null, '', null, '',null)
 
+
+
+  countries = [
+    { value: 'CN', label: '中国' },
+    { value: 'USA', label: '美国' },
+    { value: 'UK', label: '英国' },
+    { value: 'SGP', label: '新加坡' }
+  ];
+
+
+  cryptos = [
+    { value: 'ETH', label: 'ETH' },
+    { value: 'XRP', label: 'XRP' },
+    { value: 'XMR', label: 'XMR' },
+    { value: 'XLM', label: 'XLM' },
+    { value: 'ADA', label: 'ADA' }
+  ];
+ 
+  fiats = [
+    { value: 'CN', label: '人民币' },
+    { value: 'USA', label: '美元' },
+    { value: 'UK', label: '英镑' },
+    { value: 'SGP', label: '新币' }
+    ];
+
+    payments = [
+      { value: 'ZFB', label: '支付宝' },
+      { value: 'WX', label: '微信' },
+      { value: 'bank', label: '银行' }
+      
+    ];
+
+   
+
+    addadvertisement(){
+      console.log(this.advertisement)
+      this.advservice.addadvertisement(this.advertisement).subscribe(result=>{
+        console.log(result);
+      })
     }
-  }
-
-  getfiatprice(crypto) {
-    switch (this.information.fiat) {
-      case 'SGD':
-        this.adservice.getprice(crypto, 'SGD').subscribe(result => {
-          this.cryptoprice = Number(result[0].price_sgd);
-        
-        })
-        break;
-      case 'CNY':
-        this.adservice.getprice(crypto, 'CNY').subscribe(result => {
-          this.cryptoprice = Number(result[0].price_cny);
-     
-        })
-        break;
-      case 'USD':
-        this.adservice.getprice(crypto, 'USD').subscribe(result => {
-          this.cryptoprice = Number(result[0].price_usd);
-       
-        })
-        break;
-      case 'KRW':
-        this.adservice.getprice(crypto, 'KRW').subscribe(result => {
-          this.cryptoprice = Number(result[0].price_krw);
-    
-        })
-        break;
-    }
-  }
-
-  
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddadvertisementPage');
-  }
-  addbuyad() {
-    this.information.owner = this.userservice.getCurrentUser().username;
-    this.adservice.addadbuy(this.information).subscribe(result => {
-      console.log(result);
-     
-    });
-  }
-  addsellad() {
-    this.information.owner = this.userservice.getCurrentUser().username;
-    this.adservice.addadsell(this.information).subscribe(result => {
-      console.log(result);
-     
-    });
-  }
 
   ngOnInit() {
 

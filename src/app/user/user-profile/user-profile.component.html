@@ -1,0 +1,72 @@
+<div class="header">
+  <div>
+    <h4 style="color:rgba(75, 64, 4, 0.795)">
+      <strong>基本信息</strong>
+    </h4>
+    <span style="margin-left:25px">detail</span>
+    <i class="anticon anticon-down-square"></i>
+  </div>
+
+  <div class="content">
+    <div nz-row>
+      <div nz-col [nzSpan]="3" [nzOffset]="1" style="margin-top:20px">
+        <span > 
+          <img class="image" src="../../assets/2.jpg" /> 
+          </span> 
+      </div>
+
+      <div class="information" nz-col [nzSpan]="8">
+        <h3>
+          <strong>Jerry</strong>
+        </h3>
+
+        <ul style="margin-top:30px">
+          <li>身份验证: &nbsp; &nbsp; <a routerLink='/user/userVerification'>未验证</a></li>
+          <li>电子邮件: &nbsp; &nbsp; <a  (click)="showModal()">未验证</a></li>
+          <li>手机号码: &nbsp;&nbsp; &nbsp;已验证</li>
+          <li>注册时间:</li>
+          <li>第一次交易时间:</li>
+          <li>语言: </li>
+          <li>信任人数: </li>
+          <li>累计交易次数: </li>
+          <li>累计交易量: </li>
+        </ul>
+
+        <nz-input  [(ngModel)]="inputValue" [nzType]="'textarea'" [nzRows]="'6'" style="margin-top:30px; width:400px" [nzPlaceHolder]="'简介，关于您的介绍消息，不超过200个字'"></nz-input>
+
+        <button nz-button [nzType]="'primary'" style="margin-top:20px;width:160px;height:40px" >
+          <span>保存</span>
+        </button>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<nz-modal [nzVisible]="isVisible"  [nzTitle]="'邮箱验证'" [nzContent]="idContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)" [nzConfirmLoading]="isConfirmLoading">
+    <ng-template #idContent>
+      <div class="alert">
+   
+      <div>
+          
+      <nz-input style="width: 400px;height:40px"  [nzPlaceHolder]="'     请输入邮箱地址'" >
+          <ng-template #prefix >
+              <i style="color:#108ee9;font-size:30px;margin-right:20px" class="anticon anticon-mail"></i>
+            </ng-template>
+      </nz-input>
+      </div>
+      <div style="margin-top:20px">
+       <nz-input style="width: 320px;height:40px"  [nzPlaceHolder]="'     请输入验证码'" >
+          <ng-template #prefix >
+              <i style="color:#108ee9;font-size:30px" class="anticon anticon-safety"></i>
+            </ng-template>
+       </nz-input>
+       <a style="color:#108ee9;margin-left:10px">发送验证码</a>
+      </div>
+    
+      </div>
+    </ng-template>
+  </nz-modal>
