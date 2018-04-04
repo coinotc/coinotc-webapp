@@ -49,11 +49,11 @@
         <li  >
           <a [routerLink]="['/wallet']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
             <span style="margin-right:5p;color:#e6e0d6" class="glyphicon glyphicon-credit-card" ></span>
-            &nbsp;&nbsp;&nbsp;<span style="color:#e09826">钱包</span>
+            &nbsp;&nbsp;&nbsp;<span style="color:#e09826" >钱包</span>
             <span style="color:white" class="caret" ></span>
           </a>
           
-          <ul class="dropdown-menu" role="menu" style="width:93px">
+          <ul class="dropdown-menu" role="menu" style="width:102px">
             <li>
               <a href="#">穷</a>
             </li>
@@ -68,20 +68,20 @@
           </ul>
         </li>
         <li >
-          <a [routerLink]="['/user']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
+          <a [routerLink]="['/user/userProfile']" class="dropdown-toggle" data-toggle="dropdown" (click)="showoff()">
             <span style="margin-right:10px;color:#aaa" class="glyphicon glyphicon-user" ></span>
             <span style="color:#e09826">用户中心</span>
             <span style="color:white" class="caret" ></span>
           </a>
-          <ul class="dropdown-menu" style="width:118px">
+          <ul class="dropdown-menu" style="width:130px">
             <li>
-              <a routerLink='/user'>用户中心</a>
+              <a routerLink='/user/userProfile'>用户中心</a>
             </li>
             <li>
-              <a routerLink='/myadv'>我的广告</a>
+              <a routerLink='/myadv/adsell'>我的广告</a>
             </li>
             <li class="divider" style="height:2px"></li>
-            <li style="padding-bottom:5px">
+            <li>
               <a routerLink='/logout' >退出</a>
             </li>
           </ul>

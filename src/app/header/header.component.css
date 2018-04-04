@@ -25,6 +25,8 @@
 }
 
 
-/* .collapse navbar-collapse>ul>li>a{
-    color:#e09826
-} */
+.container-fluid {
+    font-size: 14px;
+   
+   
+}

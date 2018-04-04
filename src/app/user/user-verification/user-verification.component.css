@@ -77,3 +77,39 @@
     top: 3px;
     margin-right: 20px;
 }
+
+.notyet{
+    height: 95px;
+    border: 1px solid;
+    width: auto;
+    margin: 25px 30px;
+    background-color: rgb(246, 254, 255);
+   
+}
+
+
+
+.notyet>span{
+    color: black;
+    font-size: 20px;
+    position:relative;
+    top:-5px;
+}
+
+.notyet>i{
+    color:#56585a;
+    font-size: 35px;
+    margin: 25px 20px 0px 40px;
+}
+
+.notyet>button{
+    float:right;
+    position: relative;
+    top:30px;
+    right: 40px;
+    
+}
+
+.alert>div{
+    margin: 10px 20px;
+}

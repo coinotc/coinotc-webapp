@@ -27,6 +27,8 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
 import { UserTrustedComponent } from './user/user-trusted/user-trusted.component';
 import { UserTrustingComponent } from './user/user-trusting/user-trusting.component';
 import { UserVerificationComponent } from './user/user-verification/user-verification.component';
+import { AdBuyComponent } from './my-advertisement/ad-buy/ad-buy.component';
+import { AdSellComponent } from './my-advertisement/ad-sell/ad-sell.component'
 
 
 
@@ -76,6 +78,17 @@ const routes: Routes = [
     
   },
   {
+    path:'myadv',component:MyAdvertisementComponent,
+    children:[
+      {
+        path:'adbuy',component:AdBuyComponent
+      },
+      {
+        path:'adsell',component:AdSellComponent
+      }
+    ]
+  },
+  {
     path: 'ETHBuy',component:EthbuyComponent,
   },
  {
@@ -114,27 +127,8 @@ const routes: Routes = [
 {
   path:'orderhome',component:HomeComponent,
 },
-{
-  path:'myadv',component:MyAdvertisementComponent,
-},
-// {
-//   path:'accountOption',component:AccountOptionsComponent,
-// },
-// {
-//   path:'userTrusted',component:UserTrustedComponent,
-// },
-// {
-//   path:'userTrusting',component:UserTrustingComponent,
-// },
-// {
-//   path:'userBlocking',component:UserBlockingComponent,
-// },
-// {
-//   path:'userProfile',component:UserProfileComponent,
-// },
-// {
-//   path:'userVerification',component:UserVerificationComponent,
-// },
+
+
 
 ];
 

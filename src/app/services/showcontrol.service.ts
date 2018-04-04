@@ -6,7 +6,7 @@ import { Subject }    from 'rxjs/Subject';
 @Injectable()
 export class ShowcontrolService {
   
-//创建一个subjeck,这个subject是个boolean
+//创建一个subject,这个subject是个boolean
   private showCryptoMenuBuy = new Subject<boolean>();
   private showCryptoMenuSell = new Subject<boolean>()
 

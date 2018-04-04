@@ -1,6 +1,6 @@
 <div class="header">
   <div>
-    <h4 style="color:rgba(75, 64, 4, 0.795);text-shadow:5px 5px 5px #888888">
+    <h4 style="color:rgba(75, 64, 4, 0.795)">
       <strong>安全设置</strong>
     </h4>
     <span style="margin-left:25px">detail</span>
@@ -15,7 +15,7 @@
       <i class="anticon anticon-safety"></i>
       资金密码
       <small>提现、修改安全设置时输入</small>
-      <button nz-button [nzType]="'primary'" nzGhost style="width:80px">
+      <button nz-button [nzType]="'primary'" nzGhost style="width:80px" (click)="coinPassword()">
         <span>修改</span>
       </button>
     </li>
@@ -23,7 +23,7 @@
       <i class="anticon anticon-mail"></i>绑定邮箱
       <small>用于登录、提币、修改安全设置时输入
       </small>
-      <button nz-button [nzType]="'primary'">
+      <button nz-button [nzType]="'primary'" (click)="email()">
         <span>立即设置</span>
       </button>
     </li>
@@ -32,17 +32,17 @@
       <small>提现，修改密码，及安全设置时用以收取验证短信
 
       </small>
-      <button nz-button [nzType]="'primary'" nzGhost style="width:80px">
-          <span>修改</span>
-        </button>
+      <button nz-button [nzType]="'primary'" nzGhost style="width:80px" (click)="phone()">
+        <span>修改</span>
+      </button>
     </li>
     <li>
       <i class="anticon anticon-lock"></i>登录密码
       <small>用于登录账户时输入
       </small>
-      <button nz-button [nzType]="'primary'" nzGhost style="width:80px">
-          <span>修改</span>
-        </button>
+      <button nz-button [nzType]="'primary'" nzGhost style="width:80px" (click)="login()">
+        <span>修改</span>
+      </button>
     </li>
     <li>
       <i class="anticon anticon-chrome"></i>谷歌验证
@@ -54,3 +54,119 @@
 
   </ul>
 </div>
+
+
+                                            <!-- modals -->
+
+
+<!-- 资金密码 -->
+<nz-modal [nzVisible]="isVisible1" [nzTitle]="'修改资金密码'" [nzContent]="coinContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)"
+  [nzConfirmLoading]="isConfirmLoading">
+  <ng-template #coinContent>
+    <div class="alert">
+      <p style="margin:0px 0px 20px 60px; color: saddlebrown">资金密码将用于货币的提款，保护您的货币不被他人轻易盗用</p>
+      <div>
+        <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     请输入原资金密码'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px;margin-right:20px" class="anticon anticon-unlock"></i>
+          </ng-template>
+        </nz-input>
+      </div>
+      <div style="margin-top:10px">
+        <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     输入新资金密码'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px" class="anticon anticon-lock"></i>
+          </ng-template>
+        </nz-input>
+      </div>
+      <div style="margin-top:10px">
+        <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     请再次输入新资金密码'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px" class="anticon anticon-lock"></i>
+          </ng-template>
+        </nz-input>
+      </div>
+    </div>
+  </ng-template>
+</nz-modal>
+
+<!-- 邮箱 -->
+<nz-modal [nzVisible]="isVisible2" [nzTitle]="'邮箱验证'" [nzContent]="emailContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)"
+  [nzConfirmLoading]="isConfirmLoading">
+  <ng-template #emailContent>
+    <div class="alert">
+      <div>
+        <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     请输入邮箱地址'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px;margin-right:20px" class="anticon anticon-mail"></i>
+          </ng-template>
+        </nz-input>
+      </div>
+      <div style="margin-top:20px">
+        <nz-input style="width: 320px;height:40px" [nzPlaceHolder]="'     请输入验证码'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px" class="anticon anticon-safety"></i>
+          </ng-template>
+        </nz-input>
+        <a style="color:#108ee9;margin-left:10px">发送验证码</a>
+      </div>
+    </div>
+  </ng-template>
+</nz-modal>
+
+
+<!-- 绑定手机 -->
+<nz-modal [nzVisible]="isVisible3" [nzTitle]="'绑定手机'" [nzContent]="phoneContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)"
+  [nzConfirmLoading]="isConfirmLoading">
+  <ng-template #phoneContent>
+    <div class="alert">
+      <div>
+        <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     请输入手机号码'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px;margin-right:20px" class="anticon anticon-mobile"></i>
+          </ng-template>
+        </nz-input>
+      </div>
+      <div style="margin-top:20px">
+        <nz-input style="width: 320px;height:40px" [nzPlaceHolder]="'     请输入验证码'">
+          <ng-template #prefix>
+            <i style="color:#108ee9;font-size:30px" class="anticon anticon-safety"></i>
+          </ng-template>
+        </nz-input>
+        <a style="color:#108ee9;margin-left:10px">发送验证码</a>
+      </div>
+    </div>
+  </ng-template>
+</nz-modal>
+
+
+<!-- 登录密码 -->
+<nz-modal [nzVisible]="isVisible4" [nzTitle]="'更改登录密码'" [nzContent]="loginContent" (nzOnCancel)="handleCancel($event)" (nzOnOk)="handleOk($event)"
+  [nzConfirmLoading]="isConfirmLoading">
+  <ng-template #loginContent>
+      <div class="alert">
+          <p style="margin:0px 0px 20px 60px; color: saddlebrown">请记住修改后的密码，且勿与他人分享您的密码</p>
+    <div>
+            <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     请输入原登录密码'">
+              <ng-template #prefix>
+                <i style="color:#108ee9;font-size:30px;margin-right:20px" class="anticon anticon-unlock"></i>
+              </ng-template>
+            </nz-input>
+          </div>
+          <div style="margin-top:10px">
+            <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     输入新登录密码'">
+              <ng-template #prefix>
+                <i style="color:#108ee9;font-size:30px" class="anticon anticon-lock"></i>
+              </ng-template>
+            </nz-input>
+          </div>
+          <div style="margin-top:10px">
+            <nz-input style="width: 400px;height:40px" [nzPlaceHolder]="'     请再次输入新登录密码'">
+              <ng-template #prefix>
+                <i style="color:#108ee9;font-size:30px" class="anticon anticon-lock"></i>
+              </ng-template>
+            </nz-input>
+          </div>
+        </div>
+  </ng-template>
+</nz-modal>

@@ -1,0 +1,55 @@
+<div class="header">
+  <div>
+    <h4 style="color:rgba(75, 64, 4, 0.795)">
+      <strong>出售广告</strong>
+    </h4>
+    <span style="margin-left:43px">detail</span>
+    <i class="anticon anticon-down-square"></i>
+  </div>
+</div>
+
+
+<div class="blank">
+
+
+<div>
+  <nz-tabset  >
+    <nz-tab id="ant" *ngFor="let tab of tabs">
+      <ng-template #nzTabHeading>
+        <p style="color:#b7812c;font-size:18px; margin:10px 20px">{{tab.name}}</p>
+      </ng-template>
+      </nz-tab>
+   
+  </nz-tabset>
+
+  <div>
+    <table class="table">
+     <tr class="gap">
+       <th style="padding-left:30px">订单编号</th>
+       <th>广告类型</th>
+       <th>国家</th>
+       <th>价格</th>
+       <th>溢价比例</th>
+       <th>创建时间</th>
+       <th>状态</th>
+     </tr>
+
+     <tr *ngFor="let a of orders">
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+    </table>
+   </div>
+
+  </div>
+
+
+
+ <h3><i class="anticon anticon-copy"></i>&nbsp;&nbsp;&nbsp;暂无消息</h3>
+</div>

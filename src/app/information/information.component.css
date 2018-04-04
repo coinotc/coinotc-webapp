@@ -13,4 +13,10 @@
   padding-top: 80px;
   padding-left: 100px;
 }
+
+.image{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%
+}
  

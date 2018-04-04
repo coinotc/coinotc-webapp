@@ -7,10 +7,10 @@
 
     
     <div>
-    <nz-tabset [nzTabBarExtraTemplate]="tabBarExtraContent" style="margin-top:20px">
+    <nz-tabset >
       <nz-tab *ngFor="let tab of tabs">
         <ng-template #nzTabHeading>
-          <strong style="  color:#b7812c">{{tab.name}}</strong>
+          <strong style="  color:#b7812c;font-size:18px; margin:10px 20px">{{tab.name}}</strong>
         </ng-template>
         <span></span>
       </nz-tab>
@@ -19,8 +19,8 @@
   
     <div>
       <table class="table">
-       <tr>
-         <th>交易伙伴</th>
+       <tr class="gap">
+         <th style="padding-left:30px">交易伙伴</th>
          <th>订单编号</th>
          <th>类型</th>
          <th>交易金额</th>

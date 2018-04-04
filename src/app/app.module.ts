@@ -39,6 +39,9 @@ import { AccountOptionsComponent } from './user/account-options/account-options.
 import { UserTrustedComponent } from './user/user-trusted/user-trusted.component';
 import { UserTrustingComponent } from './user/user-trusting/user-trusting.component';
 import { UserBlockingComponent } from './user/user-blocking/user-blocking.component';
+import { AdBuyComponent } from './my-advertisement/ad-buy/ad-buy.component';
+import { AdSellComponent } from './my-advertisement/ad-sell/ad-sell.component';
+import { CryptocontrolService } from './services/cryptocontrol.service';
 
 
 
@@ -75,6 +78,8 @@ import { UserBlockingComponent } from './user/user-blocking/user-blocking.compon
     UserTrustedComponent,
     UserTrustingComponent,
     UserBlockingComponent,
+    AdBuyComponent,
+    AdSellComponent,
     
   ],
   imports: [
@@ -87,7 +92,7 @@ import { UserBlockingComponent } from './user/user-blocking/user-blocking.compon
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [AdvService,ShowcontrolService],
+  providers: [AdvService,ShowcontrolService, CryptocontrolService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

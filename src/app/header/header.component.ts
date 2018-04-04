@@ -45,12 +45,6 @@ export class HeaderComponent implements OnInit {
   }
   
 
-  /*
-  showoff() {
-    this.showBuy = false;
-    this.showSell = false;
-  }*/
-
 
   ngOnInit() {
   }

@@ -26,3 +26,7 @@
 .list>li>button{
     float:right;
 }
+
+.alert>div{
+    margin: 10px 20px
+}

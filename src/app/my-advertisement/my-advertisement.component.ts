@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyAdvertisementComponent implements OnInit {
 
+  msg1 = "ETH"
+  msg2 = "XRP"
+  msg3 = "XMR"
+  msg4 = "XLM"
+  msg5 = "ADA"
+
   constructor() { }
 
   ngOnInit() {
