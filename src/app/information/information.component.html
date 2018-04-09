@@ -1,10 +1,12 @@
 <div class="content-wrapper">
 
   <div nz-row>
+  <div nz-col [nzSpan]="18">
+  <div nz-row>
     <div nz-col [nzSpan]="3">
         <span > 
             <img class="image" src="../../assets/2.jpg" /> 
-            </span> 
+        </span> 
     </div>
   
   <div nz-col [nzSpan]="8" >
@@ -23,26 +25,34 @@
     </div>
   </div>
 
-  <hr>
+  <hr style="border:solid rgb(202, 200, 200) 0.5px;margin-top:60px;margin-right:280px">
 
-  <div style="margin-top:120px">
-    <ul>
-      <li><h3>报价</h3></li>
-      <li><h3>限额</h3></li>
-      <li><h3>交易方式</h3></li>
+  <div style="margin-top:40px">
+    <ul class="list">
+      <li><h4>报价:</h4></li>
+      <li><h4>限额:</h4></li>
+      <li><h4>交易方式:</h4></li>
     </ul>
   </div>
 
   <div style="margin-top:80px">
-    <h4>数量</h4>
-    <nz-input-number style="width: 300px;margin-top:20px" [(ngModel)]="demoValue" [nzSize]="'large'" [nzPlaceHolder]="'输入您想购买的金额'"></nz-input-number>
-    <strong><i class="anticon anticon-swap"></i></strong>
-    <nz-input-number style="width: 300px;margin-top:20px" [(ngModel)]="demoValue" [nzSize]="'large'" [nzPlaceHolder]="'输入您想购买的数量'"></nz-input-number>
+    <strong><h3>交易数量</h3></strong> 
+    <nz-input style="width: 385px;height:40px;margin-top:10px"  [nzPlaceHolder]="'请输入您想购买的金额'" >
+      <ng-template #prefix >
+          <!-- <i style="color:#108ee9;font-size:30px" class="anticon anticon-mail"></i> -->
+        </ng-template>
+  </nz-input>
+    <i class="anticon anticon-swap" style="font-size:20px;color:black"></i>
+    <nz-input style="width: 385px;height:40px"  [nzPlaceHolder]="'请输入您想购买的数量'" >
+      <ng-template #prefix >
+          <!-- <i style="color:#108ee9;font-size:30px" class="anticon anticon-mail"></i> -->
+        </ng-template>
+  </nz-input>
   </div>
   <div >
-      <button nz-button [nzType]="'primary'" style="width: 633px;margin-top:20px">
+      <button nz-button [nzType]="'primary'" style="width: 800px;margin-top:20px;height:50px">
         <a routerLink='/orderhome'>
-          <span>确定购买</span>
+          <span style="font-size:20px">确定购买</span>
         </a>
         </button>
   </div>
@@ -56,10 +66,17 @@
         1.交易前请详细了解对方的交易信息。<br>
         2.请通过平台进行沟通约定，并保存好相关聊天记录。<br>
         3.如遇到交易纠纷，可通过申诉来解决问题。<br>
-        4.在您发起交易请求后，交易币会被锁定在托管中，受到 CoinOTC 保护。如果您是买家，发起交易请求后，请在付款周期内付款并把交易标记为付款已完成。卖家在收到付款后将会放行处于托管中的交易币。<br>
+        4.在您发起交易请求后，交易币会被锁定在托管中，受到 CoinOTC 保护。如果您是买家，发起交易请求后，<br>
+        请在付款周期内付款并把交易标记为付款已完成。卖家在收到付款后将会放行处于托管中的交易币。<br>
         5.交易前请阅读《CoinOTC服务条款》以及常见问题、交易指南等帮助文档。<br>5.请注意欺诈风险，交易前请检查该用户收到的评价和相关信用信息，并对新近创建的账户多加留意。<br>
         6.托管服务保护网上交易的买卖双方。在发生争议的情况下，我们将评估所提供的所有信息，并将托管的交易币放行给其合法所有者。
     </div>
   </div>
+</div>
 
 </div>
+
+
+
+
+

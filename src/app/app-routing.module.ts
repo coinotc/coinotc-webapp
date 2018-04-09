@@ -29,6 +29,7 @@ import { UserTrustingComponent } from './user/user-trusting/user-trusting.compon
 import { UserVerificationComponent } from './user/user-verification/user-verification.component';
 import { AdBuyComponent } from './my-advertisement/ad-buy/ad-buy.component';
 import { AdSellComponent } from './my-advertisement/ad-sell/ad-sell.component'
+import { LoginComponent } from './login/login.component'
 
 
 
@@ -127,8 +128,9 @@ const routes: Routes = [
 {
   path:'orderhome',component:HomeComponent,
 },
-
-
+{
+  path:'login',component:LoginComponent,
+},
 
 ];
 

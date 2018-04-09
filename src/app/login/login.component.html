@@ -1,0 +1,47 @@
+<body class="hold-transition ">
+    <div class="login">
+
+      <div class="login-logo">
+        <a><b>Coin</b>OTC</a>
+      </div>
+      <hr style="border:1px #aaa solid;width:60%;margin-left:80px">
+      <div class="login-box-body">
+        <p class="login-box-msg"><strong>登录即可开始交易</strong></p>
+    
+
+          <div class="form-group has-feedback">
+            <nz-input style="height:40px" [nzPlaceHolder]="'账户'">    
+                <ng-template #prefix >
+                    <i style="color:#108ee9;font-size:17px" class="anticon anticon-user"></i>
+                  </ng-template>       
+            </nz-input>
+          </div>
+          <div class="form-group has-feedback">
+            <nz-input style="height:40px" [nzType]="'password'" class="form-control" [nzPlaceHolder]="'密码'">   
+                <ng-template #prefix >
+                    <i style="color:#108ee9;font-size:18px" class="anticon anticon-lock"></i>
+                  </ng-template>        
+            </nz-input>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              <div class="checkbox icheck">
+                <label style="margin-left:20px">
+                  <input type="checkbox"> 记住账号
+                </label>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-xs-4">
+              <button nz-button [nzType]="'primary'">登录</button>
+            </div>
+            <!-- /.col -->
+          </div>   
+        <a >忘记密码</a>
+        <a  class="text-center">注册</a>
+    
+      </div>
+    </div>
+    
+   
+    </body>

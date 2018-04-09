@@ -1,0 +1,17 @@
+.login{
+    background-color: #fff;
+    width: 400px;
+    float: right;
+    margin: 100px 60px;
+}
+
+
+
+.text-center{
+    float:right;
+}
+
+.col-xs-4>button{
+    float:right;
+}
+

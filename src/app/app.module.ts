@@ -42,6 +42,7 @@ import { UserBlockingComponent } from './user/user-blocking/user-blocking.compon
 import { AdBuyComponent } from './my-advertisement/ad-buy/ad-buy.component';
 import { AdSellComponent } from './my-advertisement/ad-sell/ad-sell.component';
 import { CryptocontrolService } from './services/cryptocontrol.service';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -80,6 +81,7 @@ import { CryptocontrolService } from './services/cryptocontrol.service';
     UserBlockingComponent,
     AdBuyComponent,
     AdSellComponent,
+    LoginComponent,
     
   ],
   imports: [
